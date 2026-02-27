@@ -15,4 +15,7 @@
     "modules/agent/**/*.ts",
     "tests/agent/**/*.ts"
   ]
+    "noEmit": true
+  },
+  "include": ["modules/agent/**/*.ts", "tests/agent/**/*.ts"]
 }
