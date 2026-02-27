@@ -8,8 +8,14 @@
  *
  * Validation is intentionally not implemented in this commit.
  */
-export interface ToolInvocationEnvelope {
-  tool: string | null;
-  arguments?: unknown;
-  response?: string;
-}
+export type ToolInvocationEnvelope =
+  | {
+      tool: string;
+      arguments: unknown;
+      response?: never;
+    }
+  | {
+      tool: null;
+      response: string;
+      arguments?: never;
+    };
